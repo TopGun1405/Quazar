@@ -25,3 +25,9 @@ class Weather(models.Model):
     moon_phase = models.CharField()
 
     dew_point = models.FloatField()
+
+    def __str__(self) -> str:
+        pass
+
+    def is_rainy(self) -> bool:
+        return "rain" in self.weather_condition
